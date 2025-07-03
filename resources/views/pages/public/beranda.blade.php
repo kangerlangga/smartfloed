@@ -409,7 +409,8 @@
         };
         L.control.locate(options).addTo(map);
 
-        const polygon = L.polygon(boundary, {color: 'orange'}).addTo(map);
+        const correctedBoundary = boundary.map(coord => [coord[1], coord[0]]);
+        const polygon = L.polygon(correctedBoundary, {color: 'orange'}).addTo(map);
 
         <?php if ($jL <= 0) : ?>
         map.fitBounds(polygon.getBounds());
