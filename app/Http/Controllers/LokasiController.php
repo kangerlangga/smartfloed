@@ -59,7 +59,7 @@ class LokasiController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Request $request): View
+    public function edit(Request $request)
     {
         $id = $request->input('id');
         $lokasi = Lokasi::find($id);
@@ -75,7 +75,7 @@ class LokasiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request): RedirectResponse
+    public function update(Request $request)
     {
         $id = $request->input('id');
         $lokasi = Lokasi::find($id);
