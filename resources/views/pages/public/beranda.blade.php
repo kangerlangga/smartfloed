@@ -427,7 +427,6 @@
         .addTo(map)
         .openPopup();
 
-
         var status = document.getElementById('status').textContent.trim();
         var color;
         switch (status) {
